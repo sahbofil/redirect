@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Redirecting...</title>
+  <link href="https://hangeul.pstatic.net/hangeul_static/css/NanumBarunGothicYetHangul.css" rel="stylesheet">
+  <link rel="stylesheet" href="./css/main.css" />
+  <script>
+    const images = [
+      "salgu1.jpg",
+      "salgu2.jpg",
+      "salgu3.jpg",
+      "salgu-rare.png" // 이로치 살구짤
+    ];
+    const rareChance = 0.05; // 5% 확률
+    const selected = Math.random() < rareChance ? images[3] : images[Math.floor(Math.random() * 3)];
+    document.getElementById("salgu").src = `./img/${selected}`;
+
+    const params = new URLSearchParams(window.location.search);
+    const target = params.get("to") || "https://www.diritto.co.kr/contents/2402784" // 기본 리디 링크
+    document.getElementById("link").href = target;
+
+    /* setTimeout(() => {
+      window.location.href = target;
+    }, 3000);
+    */
+  </script>
+</head>
+<body>
+  <!-- <img id="salgu" src="" alt="살구짤" /> -->
+  <div class="msg">살구가 안내합니다.<br>3초 뒤 이동할게요...</div>
+  <ul>
+    <li><a href="#">리디토 바로가기</a></li>
+    <li><a href="#">네이버시리즈: 챌린지 바로가기</a></li>
+  </ul>
+  https://sabopil.github.io/naver?utm_source=twitter&utm_medium=redirect&utm_campaign=ep01
+
+  https://sabopil.github.io/ridi?utm_source=twitter&utm_medium=redirect&utm_campaign=ep01
+
+  
+</body>
