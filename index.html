@@ -1,10 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>회원권이 소진되었습니다 ~ 사보필 ~ Redirecting...</title>
-  <link rel="stylesheet" href="./css/main.css" />
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-R84JKQWC71"></script>
   <script>
@@ -13,6 +9,10 @@
     gtag('js', new Date());
     gtag('config', 'G-R84JKQWC71');
   </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>회원권이 소진되었습니다 ~ 사보필 ~ Redirecting...</title>
+  <link rel="stylesheet" href="./css/main.css" />
 </head>
 <body>
   <div class="container"> 
@@ -68,7 +68,7 @@
     msgBox.innerHTML = `살구가 안내합니다.<br>${count}초 만 기다리세냥...`;
     if (count == 0) {
       clearInterval(countdown);
-      // window.location.href = finalURL;
+      window.location.href = finalURL;
     }
   }, 1000);
 
